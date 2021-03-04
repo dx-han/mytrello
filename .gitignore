@@ -1,0 +1,9 @@
+.DS_Store
+.idea/
+__pycache__
+*.xml
+*.iml
+
+Dockerfile
+docker-compose.yml
+.env
