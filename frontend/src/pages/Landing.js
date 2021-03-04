@@ -11,16 +11,18 @@ const Landing = () => {
             <img className="landing-banner__image" src={bgImage} />
             <div className="landing-banner__content">
                 <h1 className="landing-banner__title">
-                    Trello lets you work more collaboratively and get more done
+                    Yet Another Trello
                 </h1>
-                <h4 className="landing-banner__subtitle">
-                    Trello's boards, lists, and cards enable you to organize and
-                    prioritize your projects in a fun, flexible, and rewarding
-                    way.
-                </h4>
-                <Link to="/register" className="btn">
-                    Sign Up For Free
+                {/* <h4 className="landing-banner__subtitle">
+                    Trello is my favourite task management app. When I study Django and React, I use these two frameworks to reproduce my trello.
+                </h4> */}
+                <p >Demo Account Information</p>
+                <p >Username: <b>client</b></p>
+                <p className="landing-banner__subtitle">Password: helloworld</p>
+                <Link to="/login" className="btn">
+                    Login here
                 </Link>
+                
             </div>
         </div>
     );
