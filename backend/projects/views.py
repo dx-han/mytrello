@@ -22,7 +22,7 @@ class ProjectList(mixins.ListModelMixin, mixins.CreateModelMixin,
 
     def get_serializer_class(self):
         if self.request.method == 'GET':
-            return ShortProjectSerializer
+            return ShortProjectSerializer 
 
         return ProjectSerializer
 
@@ -124,7 +124,7 @@ class ProjectMemberDetail(APIView):
         return Response(status=status.HTTP_204_NO_CONTENT)
 
 
-site_url = "http://localhost:8000/"
+site_url = "http://localhost:8001/"
 r = redis.Redis(
     host=settings.REDIS_HOST, port=settings.REDIS_PORT, db=settings.REDIS_DB,
     charset="utf-8", decode_responses=True

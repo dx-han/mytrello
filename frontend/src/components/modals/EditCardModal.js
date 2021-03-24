@@ -97,7 +97,7 @@ const EditCardModal = ({ card, list, setShowModal }) => {
                         )
                     )}
 
-                    {/* <div
+                    <div
                         className="edit-modal__section-header"
                         style={
                             card.attachments.length === 0
@@ -115,7 +115,7 @@ const EditCardModal = ({ card, list, setShowModal }) => {
                                 <i className="fal fa-plus"></i> Add
                             </a>
                         </div>
-                    </div> */}
+                    </div>
 
                     <Attachments attachments={card.attachments} />
                     <CommentForm
@@ -135,7 +135,7 @@ const EditCardModal = ({ card, list, setShowModal }) => {
                     />
                 </div>
 
-                {/* <div className="edit-modal__right">
+                <div className="edit-modal__right">
                     <div className="edit-modal__section-header">
                         <div>Actions</div>
                     </div>
@@ -169,7 +169,7 @@ const EditCardModal = ({ card, list, setShowModal }) => {
                     </ul>
 
                     <Members members={card.assigned_to} />
-                </div> */}
+                </div>
             </div>
         </div>
     );

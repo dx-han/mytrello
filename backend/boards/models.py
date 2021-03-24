@@ -10,8 +10,7 @@ class Board(models.Model):
     owner_model = models.ForeignKey(ContentType, blank=False, null=False,
                                     related_name='board',
                                     on_delete=models.CASCADE,
-                                    limit_choices_to=models.Q(app_label='users', model='user') | models.Q(
-                                        app_label='projects', model='project'))
+                                    limit_choices_to=models.Q(app_label='users', model='user') | models.Q(app_label='projects', model='project'))
     owner_id = models.PositiveIntegerField(null=False, blank=False)
     owner = GenericForeignKey('owner_model', 'owner_id')
 
@@ -33,7 +32,7 @@ class List(models.Model):
     board = models.ForeignKey(
         Board, on_delete=models.CASCADE, related_name="lists")
     title = models.CharField(max_length=255, blank=False, null=False)
-    order = models.DecimalField(max_digits=30, decimal_places=15, blank=True, null=True)
+    order = models.DecimalField(max_digits=30, decimal_places=15 , blank=True, null=True)
     created_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
@@ -45,7 +44,7 @@ class List(models.Model):
             self.order = 2 ** 16 - 1
         elif not self.order:
             self.order = filtered_objects.aggregate(Max('order'))[
-                             'order__max'] + 2 ** 16 - 1
+                'order__max'] + 2 ** 16 - 1
         return super().save(*args, **kwargs)
 
 
@@ -70,7 +69,7 @@ class Item(models.Model):
     image_url = models.URLField(blank=True, null=False)
     color = models.CharField(blank=True, null=False, max_length=6)  # Hex Code
 
-    order = models.DecimalField(max_digits=30, decimal_places=15, blank=True, null=True)
+    order = models.DecimalField(max_digits=30,decimal_places=15, blank=True, null=True)
     labels = models.ManyToManyField(Label, blank=True)
     assigned_to = models.ManyToManyField(User, blank=True)
     due_date = models.DateTimeField(blank=True, null=True)
@@ -82,10 +81,10 @@ class Item(models.Model):
     def save(self, *args, **kwargs):
         filtered_objects = Item.objects.filter(list=self.list)
         if not self.order and filtered_objects.count() == 0:
-            self.order = 2 ** 16 - 1
+            self.order = 2 ** 16 - 1 
         elif not self.order:
             self.order = filtered_objects.aggregate(Max('order'))[
-                             'order__max'] + 2 ** 16 - 1
+                'order__max'] + 2 ** 16 - 1
         return super().save(*args, **kwargs)
 
 

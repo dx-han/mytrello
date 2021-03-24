@@ -104,7 +104,7 @@ const List = ({ list, index }) => {
                                     setEditingTitle={setEditingTitle}
                                 />
                             )}
-                            {/* <i className="far fa-ellipsis-h"></i> */}
+                            <i className="far fa-ellipsis-h"></i>
                         </div>
                         <Droppable droppableId={list.id.toString()} type="item">
                             {(provided) => (

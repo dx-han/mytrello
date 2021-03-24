@@ -4,6 +4,7 @@ from django.dispatch import receiver
 
 from . import models
 
+
 label_colors = ["4680ff", "61bd4f", "ffab4a", "ff0000",
                 "ffb64d", "c377e0", "ff80ce", "00c2e0", "51e898", "42548e"]
 

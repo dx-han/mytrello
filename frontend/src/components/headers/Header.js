@@ -88,19 +88,19 @@ const Header = (props) => {
                             <ProfilePic user={authUser} large={true} />
                             Hello, {authUser.full_name.replace(/ .*/, "")}
                         </li>
-                        {/* <li className="header__li header__li--notifications">
+                        <li className="header__li header__li--notifications">
                             <button onClick={() => setShowNotifications(true)}>
                                 <i className="fal fa-bell"></i>
                             </button>
                             {(notifications || []).find(
                                 (notification) => notification.unread == true
                             ) && <div className="header__unread"></div>}
-                        </li> */}
-                        {/* <li className="header__li header__li--border">
+                        </li>
+                        <li className="header__li header__li--border">
                             <a>
                                 <i className="fal fa-bars"></i>
                             </a>
-                        </li> */}
+                        </li>
                     </ul>
                 </div>
                 <div className="out-of-focus"></div>

@@ -202,7 +202,7 @@ const EditControls = ({
                         <i className="fal fa-tags"></i> Edit Labels
                     </button>
                 </li>
-                {/* <li>
+                <li>
                     <i className="fal fa-user"></i> Change Members
                 </li>
                 <li>
@@ -210,7 +210,7 @@ const EditControls = ({
                 </li>
                 <li>
                     <i className="fal fa-clock"></i> Change Due Date
-                </li> */}
+                </li>
             </ul>
         </div>
     );

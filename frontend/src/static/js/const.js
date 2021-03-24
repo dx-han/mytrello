@@ -1,4 +1,4 @@
-export const backendUrl = "http://localhost:8000";
+export const backendUrl = "http://localhost:8001";
 
 export const colors = [
     ["#0079bf", false],

@@ -27,9 +27,6 @@ const LoginForm = ({setErrMsgs}) => {
 
   return (
   <div className="login">
-    <p className="landing-banner__subtitle">Demo Account Information</p>
-    <p className="landing-banner__subtitle">Username: <b>client</b></p>
-    <p className="landing-banner__subtitle">Password: helloworld</p>
     <form onSubmit={handleSubmit(onSubmit)}>
       <fieldset className="login-fieldset">
         <input

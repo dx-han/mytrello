@@ -11,7 +11,7 @@ const HomeSidebar = ({ setShowTeamModal, projects }) => {
                         <i className="fab fa-trello"></i> Boards
                     </a>
                 </li>
-                {/* <li>
+                <li>
                     <a className="btn btn--transparent btn--small">
                         <i className="fal fa-ruler-triangle"></i> Templates
                     </a>
@@ -20,17 +20,17 @@ const HomeSidebar = ({ setShowTeamModal, projects }) => {
                     <a className="btn btn--transparent btn--small">
                         <i className="fal fa-newspaper"></i> Feed
                     </a>
-                </li> */}
+                </li>
             </ul>
 
-            {/* <div className="home-menu__section">
+            <div className="home-menu__section">
                 <p className="home-menu__title">Projects</p>
                 <a className="btn btn--transparent btn--small">
                     <button onClick={() => setShowTeamModal(true)}>
                         <i className="fal fa-plus"></i>
                     </button>
                 </a>
-            </div> */}
+            </div>
             <ul>
                 <li>
                     {projects.map((project) => (

@@ -4,7 +4,6 @@ from rest_framework.views import APIView
 
 from .serializers import UserSerializer
 
-
 class RegisterUser(APIView):
     permission_classes = (permissions.AllowAny,)
     serializer_class = UserSerializer
@@ -15,7 +14,6 @@ class RegisterUser(APIView):
             user = serializer.save()
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
 
 class Me(APIView):
     serializer_class = UserSerializer

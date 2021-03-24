@@ -24,9 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'j15xdyvmn=!-s_bbj_5i0mpm-qwc4(4ox=b#rc387ox5fh&g-u'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+CORS_ALLOW_ALL_ORIGINS = True
+# CORS_ALLOWED_ORIGINS = [
+#     'http://localhost:3000'
+# ]
 
 # Application definition
 
@@ -160,9 +165,6 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=30),
 }
 
-CORS_ALLOWED_ORIGINS = [
-    'http://localhost:3000'
-]
 
 REDIS_HOST = 'localhost'
 REDIS_PORT = 6379
